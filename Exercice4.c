@@ -8,9 +8,9 @@ typedef int bool;
 int main()
 {
     int age, cine, mcdon, again;
-    string sexe, mcdo, exemple, O, N;
+    string sexe, mcdo, non, exemple, O, N;
     bool sport;
-
+    strcmp(exemple, non) == 0;
     while (again = 1)
     {
         printf("Quel âge avez vous ?\n");
@@ -25,7 +25,7 @@ int main()
         scanf("%d", &mcdon);
         printf("Pratiquez vous un sport? (1=oui 0=non)\n");
         scanf("%d", &sport);
-        if (sport = 1)
+        if (sport == 1)
         {
             printf("Le sport que vous pratiquez se trouve-t-il dans cette liste ?\n (foot,tennis,basket,judo,natation)");
             scanf("%s", exemple);
@@ -34,9 +34,9 @@ int main()
 
         printf("Recommencer le questionnaire ?   (1=oui)(0=non):\n");
         scanf("%d", &again);
-        if (again = 0)
+        if (again == 0)
         {
-          break; 
+            break;
         }
     }
 }
