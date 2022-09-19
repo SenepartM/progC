@@ -1,26 +1,33 @@
 #include <stdio.h>
-int main(){
-int i,j;
+int main() {
+	int i, j,x;
+	printf("donner x compris entre 2 et 10");
+	scanf("%d", &x);
+	while (x < 2 || x>10) {
+		printf("donner x compris entre 2 et 10");
+		scanf("%d", &x);
+	}
+	printf("\n \n \n \n \n \n ");
 
-printf("x*y\t|\t");
-for(i=1;i<=10;i++){
-    printf("%d\t",i);
-    printf("\n");
-    }
-    for(i=1;i<=10;i++){
-        printf("---");
-        printf("\n");
-    }
-    for(i=1;i<=10;i++){
-        printf("%d\t|\t",i);
-        for(j=1;j<=10;j++){
-        printf("%d\t",i*j);
-        printf("\n");
-    }}
+	printf("  |");
+
+	for (i = 1; i <= x; i++) {
+		printf("%4d", i);
+	}
+	printf("\n");
+	printf("---|----------------------------------------");
+
+	for (i = 1; i <= x; i++) {
+		printf("\n");
+		printf("%2d |", i);
+
+		for (j = 1; j < x+1; j++) {
+			printf("%4d", i*j);
+		}
 
 
 
 
 
-
+	}
 }
