@@ -25,5 +25,5 @@ int main()
             min = tab[i];
         }
     }
-    printf("max est :%d \n min est : %d", max, min);
+    printf("max est :%d \n min est : %d"\n, max, min);
 }
