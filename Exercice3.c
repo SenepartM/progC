@@ -12,4 +12,5 @@ int main()
         sommes = sommes + tab[i];
     }
     printf("La somme des éléments du tableau est %lf", sommes);
+
 }
