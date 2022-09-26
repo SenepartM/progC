@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 double tab[3][4];
-double row, col, somme;
+double row, col, SOM;
 int i, j;
 
 int main()
@@ -12,7 +12,7 @@ int main()
     printf("Saisir nombres de colones ,max4\n");
     scanf("%lf", &col);
 
-    printf("entrer les %lf éléments du tableau", row * col);
+    printf("entrer les %.lf éléments du tableau", row * col);
 
     for (i = 0; i < row; i++)
     {
@@ -26,10 +26,13 @@ int main()
     {
         for (j = 0; j < col; j++)
         {
-            printf("%lf", tab[i][j]);
+            printf("%.2lf\n", tab[i][j]);
         }
         printf("\n");
     }
-    somme = tab[i] + tab[j];
-    printf("%lf", somme);
+    for (i = 0; i < row; i++)
+        for (j = 0; j < col; j++)
+            SOM += tab[i][j];
+
+    printf("Somme des éléments : %.2lf\n", SOM);
 }
