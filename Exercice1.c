@@ -1,29 +1,35 @@
 #include <stdio.h>
 
+double tab[3][4];
+double row, col, somme;
+int i, j;
+
 int main()
 {
-    int tab[100], i, nbr, max, min;
 
-    printf("Entrer la taille du tableau : ");
-    scanf("%d", &nbr);
+    printf("Saisir nombres de lignes ,max 3\n");
+    scanf("%lf", &row);
+    printf("Saisir nombres de colones ,max4\n");
+    scanf("%lf", &col);
 
-    for (i = 0; i < nbr; i++)
+    printf("entrer les %lf éléments du tableau", row * col);
+
+    for (i = 0; i < row; i++)
     {
-        printf("Entrer une valeur");
-        scanf("%d", &tab[i]);
-    }
-    max = tab[0];
-    min = tab[0];
-    for (i = 1; i < nbr; i++)
-    {
-        if (tab[i] > max)
+        for (j = 0; j < col; j++)
         {
-            max = tab[i];
-        }
-        if (tab[i] < min)
-        {
-            min = tab[i];
+            scanf("%lf", &tab[i][j]);
         }
     }
-    printf("max est :%d \n min est : %d"\n, max, min);
+    printf("LE TABLEAU A 2 DIMENSIONS :\n");
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            printf("%lf", tab[i][j]);
+        }
+        printf("\n");
+    }
+    somme = tab[i] + tab[j];
+    printf("%lf", somme);
 }
