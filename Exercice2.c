@@ -1,30 +1,41 @@
 #include <stdio.h>
+
 int main()
 {
-    int i, c, T1[10], T2[10];
+    double t[3][4], m[3], moy, moy1, moy2;
+    int i, j, c;
+    printf("entrer les 12 éléments du tableau");
 
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < 3; i++)
     {
-        printf("Entrer l'élément %d :", i + 1);
-        scanf("%d", &T1[i]);
-    }
-    c = 0;
-    for (i = 0; i < 10; i++)
-    {
-        if (T1[i] >= 0)
+        for (j = 0; j < 4; j++)
         {
-            T2[c] = T1[i];
-            c = c + 1;
+            scanf("%lf", &t[i][j]);
         }
     }
 
-    for (i = c; i < 10; i++)
+    printf("LE TABLEAU A 2 DIMENSIONS :\n");
+    for (i = 0; i < 3; i++)
     {
-        T2[i] = 0;
+        for (j = 0; j < 4; j++)
+        {
+            printf("%.2lf\n", t[i][j]);
+        }
+        printf("\n");
     }
-    printf("\n Affichage du tableau 2 contenant uniquement les éléments positifs : \n");
-    for (i = 0; i < 10; i++)
+
+    moy = t[0][0] + t[0][1] + t[0][2] + t[0][3];
+    moy = moy / 4;
+    moy1 = t[1][0] + t[1][1] + t[1][2] + t[1][3];
+    moy1 = moy1 / 4;
+    moy2 = t[2][0] + t[2][1] + t[2][2] + t[2][3];
+    moy2 = moy2 / 4;
+
+    m[0] = moy;
+    m[1] = moy1;
+    m[2] = moy2;
+    for (c = 0; c < 3; c++)
     {
-        printf("%d\t", T2[i]);
+        printf("Moyenne de la ligne %d \n%lf\n", c + 1, m[c]);
     }
 }
