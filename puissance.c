@@ -4,7 +4,6 @@
 
 int puissance(int a, int b);
 
-
 int main()
 {
 
@@ -14,7 +13,7 @@ int main()
     printf("Entrer B : ");
     scanf("%d", &b);
 
-    printf("%d puissance %d = %d.\n\n", a, b, puissance(x, y));
+    printf("%d puissance %d = %d.\n\n", a, b, puissance(a, b));
 
     return 0;
 }
@@ -23,7 +22,7 @@ int puissance(int a, int b)
 {
     int resultat = 1;
 
-    for(int i = 0; i < b; i++)
+    for (int i = 0; i < b; i++)
     {
         resultat *= a;
     }
